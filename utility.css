@@ -53,6 +53,7 @@ nav ul li a:hover {
   align-items: center;
   color: white;
   padding: 20px;
+  text-align: center;
 }
 
 .leftSection {
@@ -78,7 +79,7 @@ nav ul li a:hover {
   border: 2px solid white;
   border-radius: 8px;
   opacity: 0.5;
-  font-size: 1.5rem;
+  font-size: 35%;
   cursor: pointer;
   background-color: transparent;
   transition: opacity 0.3s ease, font-size 0.3s ease;
@@ -105,6 +106,21 @@ nav ul li a:hover {
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  .leftSection img {
+    width: 35vw;
+    margin: 30px 0 0 100px;
+  }
+
+  .rightSection {
+    font-size: 2rem;
+  }
+
+  .rightSection .btn {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 768px) {
   nav ul li {
     margin: 0 15px;
@@ -132,6 +148,7 @@ nav ul li a:hover {
 
   .rightSection {
     font-size: 2rem;
+    padding: 20px;
   }
 
   .rightSection .btn {
@@ -160,15 +177,26 @@ nav ul li a:hover {
     font-size: 0.85rem;
   }
 
+  .firstSection {
+    padding: 10px;
+  }
+
   .leftSection img {
     width: 70vw;
+    margin: 20px auto;
   }
 
   .rightSection {
     font-size: 1.5rem;
+    padding: 10px;
   }
 
   .rightSection .btn {
     font-size: 1rem;
+    padding: 8px;
+  }
+
+  .rightSection .buttons {
+    padding: 20px 0;
   }
 }
