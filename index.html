@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rion's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./images/ricon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fondamento&family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Rani Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="i.pdf" download="rani cv" >Certificate</a></li>
+            <li>
+              <a href="document.pdf.pdf" download="rani cv">Resume</a>
+            </li>
+            <li><a href="https://rani-s123.github.io/Jobwebsites/">Projects</a></li>
+            <li>
+              <a
+                href="rajpurohitrani004@gmail.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <img src="./images/dev2.png" alt="dev logo" />
+        </div>
+        <div class="rightSection">
+          Hi there ! Welcome to my website.
+          <div>I'm <span id="name">Rani Rajpurohit</span> and I'm into</div>
+          <span id="animated_des"></span>
+          <div class="buttons">
+            <button class="btn">
+              <a
+                href="https://github.com/Rani-s123"
+                target="_blank"
+                rel="noreferrer noopener"
+                >GitHub</a
+              >
+            </button>
+            <button class="btn">
+              <a
+                href="https://www.linkedin.com/in/rani-rajpurohit-920ab822a/"
+                target="_blank"
+                rel="noreferrer noopener"
+                >LinkedIn</a
+              >
+            </button>
+            <button class="btn">
+              <a
+                href="https://www.geeksforgeeks.org/user/rajpurohi7j6r/"
+                target="_blank"
+                rel="noreferrer noopener"
+                >GeeksForGeeks</a
+              >
+            </button>
+            <button class="btn">
+              <a
+                href="https://leetcode.com/u/Rani004/"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Leetcode</a
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#animated_des", {
+        strings: [
+          "Web Development",
+          "MERN Stack Development",
+          "Data Structure and Algorithm",
+          "Java Coders"
+        ],
+        typeSpeed: 70,
+      });
+    </script>
+  </body>
+</html>
