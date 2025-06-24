@@ -282,19 +282,29 @@ section {
     font-size: 1.6rem;
   }
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+/* Mobile navbar styling */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+  .hamburger {
+    display: block;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    padding-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .nav-links li {
@@ -304,53 +314,30 @@ section {
   .nav-links a {
     display: block;
     width: 100%;
-    padding: 0.6rem 0;
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
-    transition: background 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    background-color: var(--section-bg);
-  }
-
-  .intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .intro img {
-    width: 200px;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .intro-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
+    padding: 0.8rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
+
+
 
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="logo">Rani Portfolio</div>
-    <ul class="nav-links">
-      <li><a href="#about">Home</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </header>
+<header>
+  <div class="logo">Rani Portfolio</div>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Home</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
 
   <main>
     <!-- About -->
@@ -493,6 +480,11 @@ section {
       backSpeed: 40,
       loop: true,
     });
+
+     function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
   </script>
 </body>
 </html>
